@@ -3,10 +3,12 @@ import './globals.css';
 import { CartProvider } from './context/CartContext';
 import {  TouchableOpacity, Text } from 'react-native';
 import { router } from 'expo-router';
+import { SafeAreaView } from 'react-native';
 
 export default function RootLayout() {
     return (
         <CartProvider>
+            <SafeAreaView style={{ flex: 1 }}>
             <Stack>
                 <Stack.Screen name="index" options={{
                     title: 'Products',
@@ -23,8 +25,7 @@ export default function RootLayout() {
                     title: 'Cart',
                 }} />
             </Stack>
-
-
+                </SafeAreaView >
         </CartProvider>
     );
 }
