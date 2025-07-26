@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 import { CartContext } from './context/CartContext';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Cart = () => {
     const { cart, addItemToCart, removeItemFromCart } = useContext(CartContext)!;
